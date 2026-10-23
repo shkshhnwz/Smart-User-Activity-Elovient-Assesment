@@ -10,7 +10,7 @@ const activitySchema = new mongoose.Schema(
     action: {
       type: String,
       required: [true, 'Action is required'],
-      enum: ['login', 'logout', 'view', 'click', 'custom'],
+      trim: true,
       default: 'custom',
     },
     meta: {
